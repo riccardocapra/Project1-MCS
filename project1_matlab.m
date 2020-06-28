@@ -1,5 +1,13 @@
 PATH = './matrix/';
 file = "ex15.mat";
+
+dinfo = dir('./matrix/*.mat');
+
+for K = 1 : length(dinfo)
+  thisfilename = dinfo(K).name;  %just the name
+  fprintf( 'File #%d, "%s" \n', K, thisfilename );   %do something with the data
+end
+
 result(1).name = file;
 
 loadMatrix = strcat(PATH, file);
