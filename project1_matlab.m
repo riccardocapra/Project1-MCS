@@ -1,5 +1,5 @@
 PATH = './matrix/';
-file = "Flan_1565.mat";
+file = "ex15.mat";
 result(1).name = file;
 
 loadMatrix = strcat(PATH, file);
@@ -8,6 +8,8 @@ load(loadMatrix);
 
 matrix = Problem.A;
 clear Problem;
+
+
 
 try   
     profile clear;
@@ -28,6 +30,12 @@ try
 
     result(1).error = norm(givenSolution - solution) / norm(givenSolution);
     clearvars -except keepVariables result;
+
+    fid = fopen( './results/res.csv', 'wt' );
+    fprintf(fid, '%1$s;%2$s;%3$s;%4$s;%5$s',result(1).name,result(1).nonzero,result(1).execTime,result(1).memoryUsage,result(1).error);  
+    fclose(fid);
+    
+    
 catch exception
     disp(exception.message);
     clearvars;
