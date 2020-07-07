@@ -1,2 +1,3 @@
 # ignore all files in any directory named matrix that contains the raw matrix
 matrix/
+matrix-nope/
