@@ -1,0 +1,4 @@
+matrix,length,execTime,memoryUsage,error
+/home/giovanni/MCS/python/Project1-MCS/matrix/ex15.mat,6867,0.06074166297912598,54.0546875,6.373039892025257e-07
+/home/giovanni/MCS/python/Project1-MCS/matrix/shallow_water1.mat,81920,0.777958869934082,101.23046875,2.4191432592763325e-16
+/home/giovanni/MCS/python/Project1-MCS/matrix/cfd2.mat,123440,12.30305528640747,498.66796875,3.5281971859737356e-13
